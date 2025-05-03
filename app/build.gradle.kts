@@ -72,13 +72,13 @@ dependencies {
 
     //mock library
 
-    testImplementation ("junit:junit:4.13.2")
-    testImplementation ("org.mockito:mockito-core:5.2.0")
-    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
-    testImplementation ("org.mockito.kotlin:mockito-kotlin:5.1.0")
+    testImplementation (libs.junit)
+    testImplementation (libs.mockito.core)
+    testImplementation (libs.kotlinx.coroutines.test)
+    testImplementation (libs.mockito.kotlin)
 
 
-    implementation("io.coil-kt:coil-compose:2.5.0")
+    implementation(libs.coil.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
