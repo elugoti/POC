@@ -5,6 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import com.capgemini.androidpoc.utils.isValidEmail
 
 class SignupViewModel : ViewModel() {
     var email by mutableStateOf("")
@@ -15,7 +16,7 @@ class SignupViewModel : ViewModel() {
     fun onSignupClick(onSuccess: () -> Unit) {
         var isValid = true
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        if (email.isValidEmail().not()) {
             emailError = "Invalid email"
             isValid = false
         } else {

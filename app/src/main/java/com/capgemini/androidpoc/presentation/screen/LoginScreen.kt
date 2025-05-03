@@ -41,7 +41,7 @@ fun LoginScreen(navController: NavController, viewModel: LoginViewModel = viewMo
             verticalArrangement = Arrangement.Center
         ) {
             OutlinedTextField(
-                value = viewModel.email,
+                value = viewModel.email!!,
                 onValueChange = { viewModel.email = it },
                 label = { Text("Email") },
                 isError = viewModel.emailError != null,
@@ -54,7 +54,7 @@ fun LoginScreen(navController: NavController, viewModel: LoginViewModel = viewMo
             Spacer(modifier = Modifier.height(8.dp))
 
             OutlinedTextField(
-                value = viewModel.password,
+                value = viewModel.password!!,
                 onValueChange = { viewModel.password = it },
                 label = { Text("Password") },
                 visualTransformation = PasswordVisualTransformation(),
