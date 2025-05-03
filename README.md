@@ -88,10 +88,3 @@ The project includes both unit tests and instrumentation tests:
 - Unit tests: `./gradlew test`
 - Instrumentation tests: `./gradlew connectedAndroidTest`
 
-## License
-
-[Add your license information here]
-
-## Acknowledgements
-
-- [List any libraries, resources, or inspirations]
